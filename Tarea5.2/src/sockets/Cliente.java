@@ -27,25 +27,18 @@ public class Cliente {
 		try {
 			//Aqui conecto
 			Socket miSocket = new Socket(host, puerto);
-			//System.out.println("El cliente se conecto al host " + host + " en el puerto " + puerto);
 			
 			//Aqui escribo
-			//DataOutputStream miDataOutputStream = new DataOutputStream(miSocket.getOutputStream());
-			//miDataOutputStream.writeUTF(mensaje);
-			//System.out.println("Se envio el siguiente mensaje: " + mensaje);
-			
-			//Aqui leo
-			//DataInputStream miDataInputStream = new DataInputStream(miSocket.getInputStream());
-			//respuesta = miDataInputStream.readUTF();
-			//System.out.println("Se recibio la siguiente respuesta: " + respuesta);
+			DataOutputStream miDataOutputStream = new DataOutputStream(miSocket.getOutputStream());
+			miDataOutputStream.writeUTF(mensaje);
+			System.out.println("Se envio el siguiente mensaje: " + mensaje);
 			
 			//Aqui leo objeto
 			ObjectInputStream miObjectInputStream = new ObjectInputStream(miSocket.getInputStream());
 			mensaje = (String)miObjectInputStream.readObject();
 			
 			//Aqui desconecto
-			//System.out.println("El ciente se desconecto");
-			//miDataOutputStream.close();
+			miDataOutputStream.close();
 			miSocket.close();
 		} catch (UnknownHostException e) {
 			// TODO Auto-generated catch block

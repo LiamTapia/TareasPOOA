@@ -15,25 +15,6 @@ public class Servidor {
 		this.puerto = puerto;
 		this.mensaje = mensaje;
 	}
-	/*
-	private void cargarMensaje() {
-		try {
-			FileInputStream miFileInputStream = new FileInputStream("miArchivo.dat");
-			ObjectInputStream miObjectInputStream = new ObjectInputStream(miFileInputStream);
-			elEcosistema = (Ecosistema)miObjectInputStream.readObject();
-			System.out.println(elEcosistema);
-			miFileInputStream.close();
-			miObjectInputStream.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-
-	}*/
 
 	public void iniciarServidor() {
 
