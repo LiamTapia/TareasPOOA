@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="build">
+	<path id="build.classpath">
+		<pathelement location="classes"/>
+	</path>
+	<target name="init">
+		<mkdir dir="classes"/>
+	</target>
+	<target name="clean">
+		<delete dir="classes"/>
+	</target>
+	<target depends="init" name="build">
+		<javac srcdir="." destdir="classes" source="1.5" target="1.5" fork="yes">
+			<classpath refid="build.classpath"/>
+			<include name="Ecosistema/Protista.java"/>
+			<include name="Ecosistema/Plantae.java"/>
+			<include name="Ecosistema/Animal.java"/>
+			<include name="Ecosistema/Fungi.java"/>
+			<include name="Ecosistema/Procarionte.java"/>
+			<include name="Ecosistema/Reinos.java"/>
+			<include name="Ecosistema/Biocenosis.java"/>
+			<include name="Ecosistema/Biotopo.java"/>
+			<include name="Ecosistema/SistemaBiologico.java"/>
+			<include name="Ecosistema/Isla.java"/>
+			<include name="Ecosistema/Mar.java"/>
+			<include name="Ecosistema/Continente.java"/>
+			<include name="Ecosistema/BiomaUArtificial.java"/>
+			<include name="Ecosistema/BiomaUSemiArtificial.java"/>
+			<include name="Ecosistema/BiomaUrbano.java"/>
+			<include name="Ecosistema/Pradera.java"/>
+			<include name="Ecosistema/Selva.java"/>
+			<include name="Ecosistema/Tundra.java"/>
+			<include name="Ecosistema/Desierto.java"/>
+			<include name="Ecosistema/Bosque.java"/>
+			<include name="Ecosistema/Sabana.java"/>
+			<include name="Ecosistema/Taiga.java"/>
+			<include name="Ecosistema/BiomaTerrestre.java"/>
+			<include name="Ecosistema/Rio.java"/>
+			<include name="Ecosistema/Arroyo.java"/>
+			<include name="Ecosistema/BiomaLotico.java"/>
+			<include name="Ecosistema/Lagos.java"/>
+			<include name="Ecosistema/Estanques.java"/>
+			<include name="Ecosistema/Humedales.java"/>
+			<include name="Ecosistema/BiomaLentico.java"/>
+			<include name="Ecosistema/BiomaAguaDulce.java"/>
+			<include name="Ecosistema/ZonaIntermareal.java"/>
+			<include name="Ecosistema/ZonaDemesal.java"/>
+			<include name="Ecosistema/ZonaPelagica.java"/>
+			<include name="Ecosistema/ZonaAbisal.java"/>
+			<include name="Ecosistema/BiomaMarino.java"/>
+			<include name="Ecosistema/Bioma.java"/>
+			<include name="Ecosistema/FormacionesGeologicas.java"/>
+			<include name="Ecosistema/ConstituyenteAtmosferico.java"/>
+			<include name="Ecosistema/Suelos.java"/>
+			<include name="Ecosistema/CambiosQuimicos.java"/>
+			<include name="Ecosistema/CambiosFisicos.java"/>
+			<include name="Ecosistema/Fenomenos.java"/>
+			<include name="Ecosistema/FactorAbiotico.java"/>
+			<include name="Ecosistema/EslabonesAlimenticios.java"/>
+			<include name="Ecosistema/CadenaAiimenticia.java"/>
+			<include name="Ecosistema/EstructuraVertical.java"/>
+			<include name="Ecosistema/EstructuraHorizontal.java"/>
+			<include name="Ecosistema/EstructuraFisica.java"/>
+			<include name="Ecosistema/Ecosistema.java"/>
+		</javac>
+	</target>
+</project>
